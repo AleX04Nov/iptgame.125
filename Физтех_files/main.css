@@ -50,6 +50,60 @@ h1.title {
     top: -50px;
     opacity: 0; } }
 
+#undo-button.active {
+  font-size: 30px;
+  line-height: 27px;
+  display: inline-block;
+  margin-left: 119px;
+  margin-top: 15px;
+  width: 210px; }
+  
+#undo-button.active:active {
+  font-size: 30px;
+  line-height: 27px;
+  background: #696969;
+  border-radius:10px;
+  display: inline-block;
+  margin-left: 119px;
+  margin-top: 15px;
+  width: 210px; }
+
+@media screen and (max-width: 520px) {
+#undo-button.active {
+    margin-left: 55px;
+    margin-top: 10px;
+    width: 120px;
+    height: 20px;
+    line-height: 23px;
+    font-size: 17px; }
+#undo-button.active:active {
+	margin-left: 55px;
+    margin-top: 10px;
+    width: 120px;
+    height: 20px;
+    line-height: 23px;
+    font-size: 17px;
+	background: #696969;
+	border-radius:10px;
+}	}
+
+#undo-button.inactive {
+    display: none; }
+
+.score-container, .best-container, #undo-button {
+  position: relative;
+  display: inline-block;
+  background: #bbada0;
+  padding: 15px 25px;
+  font-size: 25px;
+  height: 25px;
+  line-height: 47px;
+  font-weight: bold;
+  border-radius: 3px;
+  color: white;
+  margin-top: 8px;
+  text-align: center; }
+	
 .scores-container {
   float: right;
   text-align: right; }
@@ -103,13 +157,24 @@ h1.title {
 p {
   margin-top: 20;
   margin-bottom: 10px;
-  line-height: 1; }
+  line-height: 20px;
+  text-align:center;
+}
 
 a {
   color: #776e65;
+  margin-left:193px;
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer; }
+@media screen and (max-width: 520px){
+	a {
+  color: #776e65;
+  margin-left:97px;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer; }
+}
 
 strong.important {
   text-transform: uppercase; }

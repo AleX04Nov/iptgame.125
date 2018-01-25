@@ -61,6 +61,7 @@ KeyboardInputManager.prototype.listen = function () {
       }
 
       if (event.which === 32) self.restart.bind(self)(event);
+	  if (event.which === 8) self.undo.bind(self)(event);
     }
   });
 
@@ -71,6 +72,9 @@ KeyboardInputManager.prototype.listen = function () {
   var keepPlaying = document.querySelector(".keep-playing-button");
   keepPlaying.addEventListener("click", this.keepPlaying.bind(this));
   keepPlaying.addEventListener("touchend", this.keepPlaying.bind(this));
+  
+  var undo = document.getElementById("undo-button");
+  undo.addEventListener("click", this.undo.bind(this));
 
   // Listen to swipe events
   var touchStartClientX, touchStartClientY;
@@ -127,4 +131,9 @@ KeyboardInputManager.prototype.restart = function (event) {
 KeyboardInputManager.prototype.keepPlaying = function (event) {
   event.preventDefault();
   this.emit("keepPlaying");
+};
+
+KeyboardInputManager.prototype.undo = function (event) {
+  event.preventDefault();
+  this.emit("undo");
 };

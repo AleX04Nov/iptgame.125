@@ -58,8 +58,8 @@ h1.title {
   background: linear-gradient(to bottom, #bbada0, #ada59d);
   margin-left: 119px;
   margin-top: 15px;
-  height: 56px;
-  width: 266px; }
+  height: 27px;
+  width: 210px; }
   
 #undo-button.active:active {
   font-size: 30px;
@@ -74,16 +74,14 @@ h1.title {
 #undo-button.active {
     margin-left: 55px;
     margin-top: 10px;
-    width: 171px;
-    height: 20px;
+    width: 125px;
+    height: 0px;
     border: 0px;
     line-height: 1px;
     font-size: 17px; }
 #undo-button.active:active {
 	margin-left: 55px;
     margin-top: 10px;
-    width: 171px;
-    height: 20px;
     line-height: 1px;
     font-size: 17px;
 	border-radius:10px;

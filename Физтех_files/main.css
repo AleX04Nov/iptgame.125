@@ -53,37 +53,39 @@ h1.title {
 #undo-button.active {
   font-size: 30px;
   line-height: 27px;
+  border:0px;
   display: inline-block;
+  background: linear-gradient(to bottom, #bbada0, #ada59d);
   margin-left: 119px;
   margin-top: 15px;
-  width: 210px; }
+  height: 56px;
+  width: 266px; }
   
 #undo-button.active:active {
   font-size: 30px;
   line-height: 27px;
-  background: #696969;
+  background: linear-gradient(to top, #bbada0, #ada59d);
   border-radius:10px;
   display: inline-block;
   margin-left: 119px;
-  margin-top: 15px;
-  width: 210px; }
+  margin-top: 15px; }
 
 @media screen and (max-width: 520px) {
 #undo-button.active {
     margin-left: 55px;
     margin-top: 10px;
-    width: 120px;
+    width: 171px;
     height: 20px;
-    line-height: 23px;
+    border: 0px;
+    line-height: 1px;
     font-size: 17px; }
 #undo-button.active:active {
 	margin-left: 55px;
     margin-top: 10px;
-    width: 120px;
+    width: 171px;
     height: 20px;
-    line-height: 23px;
+    line-height: 1px;
     font-size: 17px;
-	background: #696969;
 	border-radius:10px;
 }	}
 
@@ -405,26 +407,47 @@ hr {
   .tile.tile-128 .tile-inner {
     color: #f9f6f2;
     background: #edcf72;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286); }
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.1); }
   .tile.tile-256 .tile-inner {
     color: #f9f6f2;
     background: #edcc61;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048); }
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.1); }
   .tile.tile-512 .tile-inner {
     color: #f9f6f2;
     background: #edc850;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381); }
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.1); }
   .tile.tile-1024 .tile-inner {
     color: #f9f6f2;
     background: #edc53f;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571); }
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.1); }
   .tile.tile-2048 .tile-inner {
     color: #f9f6f2;
     background: #edc22e;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333); }
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.1); }
+	.tile.tile-4096 .tile-inner {
+    color: #f9f6f2;
+    background: #00FA9A;
+    box-shadow: 0 0 30px 10px rgba(0, 250, 154, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+	font-size:18px;}
+	.tile.tile-8192 .tile-inner {
+    color: #f9f6f2;
+    background: #008000;
+    box-shadow: 0 0 30px 10px rgba(0, 128, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+	font-size:17px;}
+	.tile.tile-16384 .tile-inner {
+    color: #f9f6f2;
+    background: #20B2AA;
+    box-shadow: 0 0 30px 10px rgba(32, 178, 170, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+	font-size:27px;}
+	.tile.tile-32768 .tile-inner {
+    color: #f9f6f2;
+    background: #8B0000;
+    box-shadow: 0 0 30px 10px rgba(139, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+	font-size:27px;}
   .tile.tile-super .tile-inner {
     color: #f9f6f2;
     background: #3c3a32;
+	box-shadow: 0 0 30px 10px rgba(60, 58, 50, 0.5556), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     font-size: 30px; }
     @media screen and (max-width: 520px) {
       .tile.tile-super .tile-inner {
@@ -624,7 +647,8 @@ hr {
         background: rgba(237, 194, 46, 0.5);
         color: #f9f6f2; }
         .game-container .game-message.game-won a.keep-playing-button {
-          display: inline-block; }
+          display: inline-block;
+		  height:21px;}
       .game-container .game-message.game-won, .game-container .game-message.game-over {
         display: block; }
 
@@ -729,7 +753,21 @@ hr {
 
   .tile .tile-inner {
     font-size: 10px; }
-
+	.tile.tile-4096 .tile-inner {
+	font-size:10px;
+	}
+	.tile.tile-8192 .tile-inner {
+	font-size:9px;
+	}
+	.tile.tile-16384 .tile-inner {
+	font-size:15px;
+	}
+	.tile.tile-32768 .tile-inner {
+	font-size:18px;
+	}
+	.tile.tile-super .tile-inner {
+	font-size:20px;
+	}
   .game-message p {
     font-size: 22px !important;
     height: 30px !important;
